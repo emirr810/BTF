@@ -227,7 +227,7 @@ CloseOpen_2.TextWrapped = true
 
 -- Scripts:
 
-local function JTIESA_fake_script() -- Pages.Toggle 
+local function MLZK_fake_script() -- Pages.Toggle 
 	local script = Instance.new('LocalScript', Pages)
 
 	function PopupGui()
@@ -243,8 +243,8 @@ local function JTIESA_fake_script() -- Pages.Toggle
 	end
 	end)
 end
-coroutine.wrap(JTIESA_fake_script)()
-local function OBSTF_fake_script() -- HideName.Script 
+coroutine.wrap(MLZK_fake_script)()
+local function WCXTI_fake_script() -- HideName.Script 
 	local script = Instance.new('Script', HideName)
 
 	local button = script.Parent
@@ -259,8 +259,8 @@ local function OBSTF_fake_script() -- HideName.Script
 		end
 	end)
 end
-coroutine.wrap(OBSTF_fake_script)()
-local function AIKZ_fake_script() -- MIT.Script 
+coroutine.wrap(WCXTI_fake_script)()
+local function AYGOIG_fake_script() -- MIT.Script 
 	local script = Instance.new('Script', MIT)
 
 	local button = script.Parent
@@ -269,8 +269,8 @@ local function AIKZ_fake_script() -- MIT.Script
 		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1358, 195, 3335)
 	end)
 end
-coroutine.wrap(AIKZ_fake_script)()
-local function YKXO_fake_script() -- Spawn.Script 
+coroutine.wrap(AYGOIG_fake_script)()
+local function TLCU_fake_script() -- Spawn.Script 
 	local script = Instance.new('Script', Spawn)
 
 	local button = script.Parent
@@ -279,8 +279,8 @@ local function YKXO_fake_script() -- Spawn.Script
 		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3892, 295, -689)
 	end)
 end
-coroutine.wrap(YKXO_fake_script)()
-local function TIQRYX_fake_script() -- Rainbow.RainbowFunction 
+coroutine.wrap(TLCU_fake_script)()
+local function CXVU_fake_script() -- Rainbow.RainbowFunction 
 	local script = Instance.new('LocalScript', Rainbow)
 
 	while true do 
@@ -304,8 +304,8 @@ local function TIQRYX_fake_script() -- Rainbow.RainbowFunction
 	end 
 	end
 end
-coroutine.wrap(TIQRYX_fake_script)()
-local function KHRWHOV_fake_script() -- CloseOpen.Script 
+coroutine.wrap(CXVU_fake_script)()
+local function KQQJ_fake_script() -- CloseOpen.Script 
 	local script = Instance.new('Script', CloseOpen)
 
 	local hub = script.Parent.Parent.Hub
@@ -317,79 +317,17 @@ local function KHRWHOV_fake_script() -- CloseOpen.Script
 	end
 	end)
 end
-coroutine.wrap(KHRWHOV_fake_script)()
-local function SRZHQZ_fake_script() -- Main.Dragify 
+coroutine.wrap(KQQJ_fake_script)()
+local function CIIVHG_fake_script() -- Main.Draggable 
 	local script = Instance.new('LocalScript', Main)
 
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame,HoverFrames)
-	    local dragToggle = nil
-	    local dragSpeed = -math.huge
-	    local dragInput = nil
-	    local dragStart = nil
-		local dragPos = nil
-		local startPos = Frame.Position
-		local hoverFrm = nil
-		local function updateInput(input)
-			local Delta = input.Position - dragStart
-			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-			local distance = (startPos.X.Offset - Position.X.Offset) + (startPos.Y.Offset - Position.Y.Offset)
-			--game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
-			game:GetService("TweenService"):Create(Frame, TweenInfo.new(distance / (dragSpeed*-300)), {Position = Position}):Play()
-		end
-		if HoverFrames then
-			hoverFrm = HoverFrames
-			for i,v in ipairs(hoverFrm) do
-				v.InputBegan:Connect(function(input)
-					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-						dragToggle = true
-						dragStart = input.Position
-						startPos = Frame.Position
-						input.Changed:Connect(function()
-							if input.UserInputState == Enum.UserInputState.End then
-								dragToggle = false
-							end
-						end)
-					end
-				end)
-				v.InputChanged:Connect(function(input)
-					if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-						dragInput = input
-					end
-				end)
-			end
-		else
-			hoverFrm = Frame
-			hoverFrm.InputBegan:Connect(function(input)
-				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-					dragToggle = true
-					dragStart = input.Position
-					startPos = Frame.Position
-					input.Changed:Connect(function()
-						if input.UserInputState == Enum.UserInputState.End then
-							dragToggle = false
-						end
-					end)
-				end
-			end)
-			hoverFrm.InputChanged:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-					dragInput = input
-				end
-			end)
-		end
-		
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
-	end
-	
-	dragify(script.Parent,{script.Parent})
+	frame = script.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
 end
-coroutine.wrap(SRZHQZ_fake_script)()
-local function UVNS_fake_script() -- ADiscord.Script 
+coroutine.wrap(CIIVHG_fake_script)()
+local function XBFVBVE_fake_script() -- ADiscord.Script 
 	local script = Instance.new('Script', ADiscord)
 
 	local button = script.Parent
@@ -398,8 +336,8 @@ local function UVNS_fake_script() -- ADiscord.Script
 		loadstring(game:HttpGet("https://pastebinp.com/raw/TwyyG5mJ", true))()
 	end)
 end
-coroutine.wrap(UVNS_fake_script)()
-local function QTCWWT_fake_script() -- ADiscord.Message 
+coroutine.wrap(XBFVBVE_fake_script)()
+local function CNUEI_fake_script() -- ADiscord.Message 
 	local script = Instance.new('LocalScript', ADiscord)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -426,8 +364,8 @@ local function QTCWWT_fake_script() -- ADiscord.Message
 		end
 	end)
 end
-coroutine.wrap(QTCWWT_fake_script)()
-local function FQNM_fake_script() -- Rainbow_2.RainbowFunction 
+coroutine.wrap(CNUEI_fake_script)()
+local function SNXNLL_fake_script() -- Rainbow_2.RainbowFunction 
 	local script = Instance.new('LocalScript', Rainbow_2)
 
 	while true do 
@@ -451,8 +389,8 @@ local function FQNM_fake_script() -- Rainbow_2.RainbowFunction
 	end 
 	end
 end
-coroutine.wrap(FQNM_fake_script)()
-local function SVBZEF_fake_script() -- CloseOpen_2.Script 
+coroutine.wrap(SNXNLL_fake_script)()
+local function MAOCI_fake_script() -- CloseOpen_2.Script 
 	local script = Instance.new('Script', CloseOpen_2)
 
 	local hub = script.Parent.Parent.Hub
@@ -465,8 +403,17 @@ local function SVBZEF_fake_script() -- CloseOpen_2.Script
 	end
 	end)
 end
-coroutine.wrap(SVBZEF_fake_script)()
-local function UIDFMA_fake_script() -- BTF.Message 
+coroutine.wrap(MAOCI_fake_script)()
+local function RESCLOM_fake_script() -- Credits.Draggable 
+	local script = Instance.new('LocalScript', Credits)
+
+	frame = script.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(RESCLOM_fake_script)()
+local function YNYOT_fake_script() -- BTF.Message 
 	local script = Instance.new('LocalScript', BTF)
 
 	local StarterGui = game:GetService("StarterGui")
@@ -489,4 +436,4 @@ local function UIDFMA_fake_script() -- BTF.Message
 		wait(TimeBetweenNotifications)
 	end
 end
-coroutine.wrap(UIDFMA_fake_script)()
+coroutine.wrap(YNYOT_fake_script)()
